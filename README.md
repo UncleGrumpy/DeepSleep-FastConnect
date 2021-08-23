@@ -9,8 +9,8 @@
   I also took ideas from the ESP8266 LowPowerDemo sketch.
   
   For the fastest contention times use a static IP address, and set the gateway and netmask.
-  Waiting for an IP address to be assigned by DHCP ca add .5 to 1 additional second when connecting.
-  The biggest time save though is saving the mac address and channel of the WiFi Access Point in RTC
+  Waiting for an IP address to be assigned by DHCP can add .5 to 2 additional seconds when connecting.
+  The biggest time savings though is saving the mac address and channel of the WiFi Access Point in RTC
   memory.  This eliminates the need for the esp to do a network scan before it can begin the connection.
 
   Make sure your board is set up to wake from DeepSleep! For example...
