@@ -15,5 +15,5 @@
 
   Make sure your board is set up to wake from DeepSleep! For example...
 +  D1 Mini >> connect D0 to RST.
-+  ESP12-F >> connect GPIO16 to RST
++  ESP12-F >> connect GPIO16 to RST.
 +  ESP01   >> see [this post](https://blog.enbiso.com/post/esp-01-deep-sleep/) to make the necessary modifications. For this mod I personally like to use conductive paint and a sharp needle to apply it...
