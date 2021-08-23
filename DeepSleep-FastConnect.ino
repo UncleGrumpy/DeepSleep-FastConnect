@@ -1,23 +1,30 @@
 /*
-  ESP DeepSleep and fast reconnect to WiFi Demo
+DeepSleep-FastConnect.ino
 
-  I found this series of articles immensely helpful in comming up with this solution:
-  
-  https://www.bakke.online/index.php/2017/05/21/reducing-wifi-power-consumption-on-esp8266-part-1/
+ESP DeepSleep and fast reconnect to WiFi Demo
 
-  I also took ideas from the ESP8266 LowPowerDemo sketch.
+MIT License
 
-  For the fastest connention times use a static IP address, and set the gateway and netmask.
-  Waiting for an IP address to be assigned by DHCP ca add .5 to 1 additional second when connecting.
-  The biggest time save though is saving the mac address and channel of the WiFi Access Point in RTC
-  memory.  This eliminates the need for the esp to do a network scan befor it can begin the connection.
+Copyright (c) 2021 Winford (Uncle Grumpy)
 
-  Make sure your board is set up to wake from DeepSleep! For example...
-  D1 Mini > connect D0 to RST.
-  ESP12-F > connect GPIO16 to RST
-  ESP01 > see here: https://blog.enbiso.com/post/esp-01-deep-sleep/ to make the necessary modifications.
-          for this mod I personnaly like to use conductive paint and a sharp needle to apply it...
-        
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 */
 
 #include <ESP8266WiFi.h>
