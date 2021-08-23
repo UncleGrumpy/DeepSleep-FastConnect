@@ -156,9 +156,7 @@ void loop() {
   delay(1);
 }
 
-/* 
-  CRC support functions.
-*/
+/* CRC support functions. */
  
 void updateRTCcrc() {  // updates the reset count CRC
   nv->crc = crc32((uint8_t*)&nv->rtcData, sizeof(nv->rtcData));
